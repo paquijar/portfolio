@@ -1,58 +1,10 @@
-import Head from "next/head";
 import { NextPage } from "next";
+import Hero from "./hero/Hero";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-gray-900 text-white">
-      <Head>
-        <title>Pablo Quijano Jaramillo's Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <nav className="bg-gray-900 py-4 fixed w-full z-10 top-0">
-        <div className="container mx-auto flex items-center justify-between px-4">
-          <h1 className="text-2xl font-medium">Pablo Quijano</h1>
-          <div className="flex items-center">
-            <a
-              href="#about"
-              className="px-4 py-2 text-white hover:bg-yellow-500"
-            >
-              About
-            </a>
-            <a
-              href="#experience"
-              className="px-4 py-2 text-white hover:bg-yellow-500"
-            >
-              Experience
-            </a>
-            <a
-              href="#skills"
-              className="px-4 py-2 text-white hover:bg-yellow-500"
-            >
-              Skills
-            </a>
-            <a
-              href="#skills"
-              className="px-4 py-2 text-white hover:bg-yellow-500"
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
-
-      <section
-        className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url(./hero.jpg)" }}
-      >
-        <div className="container mx-auto py-32 text-center">
-          <h1 className="text-4xl font-medium">Welcome to my portfolio</h1>
-          <p className="text-xl">
-            I am Pablo Quijano Jaramillo, a software developer
-          </p>
-        </div>
-      </section>
-
+    <main className="bg-gray-900 text-white">
+      <Hero />
       <section id="about" className="container mx-auto py-20">
         <h2 className="text-2xl font-medium text-center text-yellow-500">
           About
@@ -141,7 +93,7 @@ const Home: NextPage = () => {
         </h2>
         <div className="text-center py-4">
           <p className="text-lg">
-            If you're interested in working together or just want to say hi,
+            If you are interested in working together or just want to say hi,
             feel free to contact me at:
           </p>
           <a
@@ -189,7 +141,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 
