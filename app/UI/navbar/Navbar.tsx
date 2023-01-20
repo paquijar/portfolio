@@ -1,6 +1,8 @@
-import Link from "next/link";
+"use client";
+import { Link } from "react-scroll";
 import { navItems } from "./items";
-function Navbar() {
+
+export const Navbar = () => {
   return (
     <>
       <nav className="bg-yellow-500 py-4 fixed w-full z-10 top-0">
@@ -9,9 +11,10 @@ function Navbar() {
           <div className="flex items-center">
             {navItems.map((item) => (
               <Link
-                href={item.url}
-                className="px-4 py-2 text-white hover:bg-yellow-500"
+                to={item.url}
+                className="px-4 py-2 text-white hover:bg-yellow-500 cursor-pointer"
                 key={item.name}
+                smooth
               >
                 {item.name}
               </Link>
@@ -21,6 +24,6 @@ function Navbar() {
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;

@@ -1,11 +1,8 @@
 import "./globals.css";
-import Navbar from "./navbar/Navbar";
+import { Navbar } from "@ui/.";
+import { LayoutProps } from "./layout.types";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en" className="bg-slate-900 text-slate-500">
       <head />
